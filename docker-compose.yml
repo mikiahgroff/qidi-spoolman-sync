@@ -1,0 +1,11 @@
+services:
+  qidi-spoolman-sync:
+    build: .
+    image: qidi-spoolman-sync
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - qidi-spoolman-sync-data:/data
+
+volumes:
+  qidi-spoolman-sync-data:
